@@ -10,4 +10,4 @@ echo parametro $$	# id del script
 echo parametro $@	# todos los parámetros que pasamos
 echo parametro $#	# número de parámetros que hemos pasado
 
-# Al ejecutarlo poner por ejemplo: .06 hola buenos días
+# Al ejecutarlo poner por ejemplo: .04 hola buenos días
