@@ -1,0 +1,23 @@
+#!/bin/bash
+# Crear un número aleatorio entre 0 y 20 y el usuario introduce números hasta que lo adivina. Nos avisa cuando hemos acertado y nos dice el número de intentos.
+
+# $RANDOM
+# $(($RANDOM %100))
+
+clear
+
+n=$(($RANDOM %20)) # Se pone %20 porque quieres 20 números
+contador=0
+while true
+do
+	read -p “Introduce número: “ res
+	let contador++
+	if [ $res -eq $n ]
+	then
+		echo Muy bien, lo has acertado en $contador intentos
+		break
+	else
+		echo No es ese, tienes que repetir
+	fi
+done
+echo Hasta la próxima
