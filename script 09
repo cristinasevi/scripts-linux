@@ -1,0 +1,12 @@
+#!/bin/bash
+# Mostrar por pantalla los números del 1 al 15 de forma inversa con until
+clear
+
+echo Los números del 1 al 15
+contador=15
+until [ $contador -le 0 ]
+do
+	echo $contador
+	let contador=contador-1
+done
+echo valor final del contador es $contador
