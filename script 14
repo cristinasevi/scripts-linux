@@ -1,0 +1,10 @@
+#!/bin/bash
+# Pedimos un número por teclado y calculamos su cuadrado de dos formas diferentes
+clear
+
+read -p “Introduce un número: “ numero
+let resultado=numero*numero
+echo primera opción $resultado
+
+resultado=`expr $numero \* $numero`
+echo segunda opción $resultado
