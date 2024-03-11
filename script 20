@@ -1,0 +1,21 @@
+#!/bin/bash
+# Calcular si un año es bisiesto, si es divisible para 4 pero no para 400.
+
+# if [[ condicion ]] && [[ condicion2 ]] Y
+# if [[ condicion ]] || [[ condicion2 ]] O
+
+# a/4 cociente
+# a%4 resto
+
+clear
+
+read -p “Introduce un año: “ a
+let bisiesto=a%4
+let bisiesto2=a%400
+
+if [[ $bisiesto -eq 0 ]] && [[ $bisiesto2 -ne 0 ]]
+then
+	echo El año es bisiesto
+else
+	echo El año no es bisiesto
+fi
