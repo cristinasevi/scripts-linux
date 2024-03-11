@@ -1,0 +1,17 @@
+#!/bin/bash
+#guardamos un número y el usuario lo tiene que adivinar
+clear
+var1=30
+echo Introduce un número a ver si aciertas:
+
+while true
+do
+	read var2
+	if [ $var1 == $var2 ]
+	then
+		echo Has adivinado el número
+	break
+	else 
+		echo Ese no es el número, vuelve a intentarlo 
+fi
+done
