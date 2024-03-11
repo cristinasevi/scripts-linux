@@ -1,0 +1,24 @@
+#!/bin/bash
+# Mostrar por pantalla los números del 0 al 10
+clear
+
+echo Los números del 0 al 10 son
+contador=0
+while [ $contador -le 10 ]
+do
+	echo $contador
+	let contador=contador+1
+done
+echo valor final del contador es $contador
+
+echo
+echo
+echo “Hecho con until”
+
+contador1=0
+until [ $contador1 -ge 11 ]
+do
+	echo $contador1
+	let contador1=contador1+1
+done
+echo valor final del contador es $contador1
