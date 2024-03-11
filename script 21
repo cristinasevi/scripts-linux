@@ -1,0 +1,29 @@
+#!/bin/bash
+# Calcula el factorial de un número
+# factorial del número 4 = 4x3x2x1
+
+clear
+
+read -p “Introduce un número: “ num
+num1=$num 
+numinicial=$num
+while [ $num -gt 1 ]
+do
+	let num=num-1
+	let numinicial=$numinicial*$num
+	#echo $numinicial
+done
+echo El factorial de $num1 es $numinicial
+
+# Otra forma de hacerlo
+
+read -p “Introduce un número: “ numero
+inicio=numero
+factorial=1
+
+while [ $numero -gt 1 ]
+do
+	let factorial=factorial*numero
+	let --numero
+done
+echo El factorial de $inicio es $factorial
