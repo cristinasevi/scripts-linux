@@ -1,0 +1,13 @@
+#!/bin/bash
+clear
+echo Introduce un nombre
+
+if [ $1 == “antonio” ]
+then
+	echo El nombre es correcto, has pasado $1
+else
+	echo El nombre no es Antonio, es $1
+fi
+echo fin del script
+
+# Al ejecutarlo poner por ejemplo: . 07 pepito
