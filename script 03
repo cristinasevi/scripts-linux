@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+echo Introduce un saludo
+read variable
+if [ $variable == “Hola” ]
+then
+	echo me ha saludado con Hola
+else
+	echo no me ha saludado con Hola, me ha dicho $variable
+fi
+echo fin del script
