@@ -1,0 +1,16 @@
+#!/bin/bash
+
+clear
+echo “Si quieres dejar de introducir palabras pon: salir”
+
+contador=0
+palabra=” “
+
+until [ “$palabra” == “salir” ]
+do
+	echo escribe una palabra
+	read palabra
+	let contador++
+done
+let contador--
+echo el número de palabras introducidas es $contador
