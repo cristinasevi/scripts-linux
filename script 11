@@ -1,0 +1,10 @@
+#!/bin/bash
+# Mostrar los números del 1 al 10, pero sólo los impares
+clear
+
+contador=1
+while [ $contador -le 10 ]
+do
+	echo $contador
+	let contador=contador+2
+done
