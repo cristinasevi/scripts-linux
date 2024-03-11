@@ -104,8 +104,8 @@ chmod 555 dir2
 4 2 1  4 2 1  4 0 1
 r w x  r w x  r _ x 
 _____  _____  _____
-prop  	grupo		otros
-  7       5       5
+prop  	grupo  otros
+  7       5      5
 
 32-Eliminar el permiso de lectura del directorio dir2, al resto de los usuarios.
 chmod 551 dir2
