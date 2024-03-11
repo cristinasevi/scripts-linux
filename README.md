@@ -10,7 +10,7 @@ Para salir del fichero → Ctrl + X Enter
 
 Hacer un comentario → # añadir comentario
 
-Copiar script en otro fichero → cp prueba nombre_fichero
+Copiar script en otro fichero → cp nombre_fichero nombre_otro_fichero
 
 Seleccionar  → Alt + A + flechitas
 
