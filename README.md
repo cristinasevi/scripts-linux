@@ -6,7 +6,7 @@ Para ejecutar el fichero → . nombre_fichero
 
 Siempre se pone al principio del fichero → #!/bin/bash
 
-Para salir del fichero → Ctrl + X Enter
+Para salir del fichero → Ctrl + X, Enter
 
 Hacer un comentario → # añadir comentario
 
