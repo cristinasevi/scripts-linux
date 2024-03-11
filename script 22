@@ -1,0 +1,24 @@
+#!/bin/bash
+# Decir si un número que introducimos por teclado es primo o no
+# 2,3,5,7,11,13,17,19,23,29,31
+
+clear
+read -p “Introduce un número para saber si es primo: “ n
+i=1 # variable divisor
+c=1 # aquí contamos el divisible entre 1 que son todos
+
+while [ $i -le $n ]
+do
+	let i++
+	let r=n%i
+	if [ $r -eq 0 ]
+	then
+		let c++
+	fi
+done
+if [ $c -eq 2 ]
+then
+echo El numero SI es primo
+else
+	echo El numero NO es primo
+fi
