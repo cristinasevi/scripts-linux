@@ -1,0 +1,22 @@
+#!/bin/bash
+# for ((comienzo del contador; condición; aumento contador ))
+# do comandos a ejecutar
+# done
+# mostrar los números del 1 al 10 por pantalla
+clear
+for (( c=1; c<=5; c++ ))
+do
+	echo iteraciones $c
+done
+
+# del 1 al 10 y del 5 al 1
+clear
+for (( c=1; c<=10; c++ ))
+do
+	echo iteraciones $c
+done
+for (( c=5; c>=10; c-- ))
+do
+	echo iteraciones $c
+done
+
