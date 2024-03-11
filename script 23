@@ -1,0 +1,21 @@
+#!/bin/bash
+# Fibonacci
+
+clear
+read -p “Número de sucesión: “ n
+x=1 
+y=1 
+contador=2
+
+echo Serie Fibonacci de $n términos
+echo $x
+echo $y
+
+while [ $contador -lt $n ]
+do
+	let z=$x+$y
+	echo $z
+	let contador++
+x=$y
+y=$z
+done
