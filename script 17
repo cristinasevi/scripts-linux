@@ -1,0 +1,17 @@
+#!/bin/bash
+# Mostrar la fecha
+clear
+
+fecha=`date | cut -d “ “ -f 1,2,3`
+hora=`date | cut -d “ “ -f 4`
+anyo=`date | cut -d “ “ -f 6`
+echo Hoy es $fecha y son las $hora del año $anyo
+
+# Mostrar la fecha ordenada, ej: mié 21 feb, en vez de mié feb 21
+clear
+
+fecha=`date | cut -d “ “ -f 1,3`
+mes=`date | cut -d “ “ -f 2`
+hora=`date | cut -d “ “ -f 4`
+anyo=`date | cut -d “ “ -f 6`
+echo Hoy es $fecha de $mes y son las $hora del año $anyo
