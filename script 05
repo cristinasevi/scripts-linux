@@ -10,4 +10,34 @@ else
 fi
 echo fin del script
 
+#!/bin/bash
+clear
+echo Introduce un nombre
+read variable
+if [ $variable == “antonio” ]
+then
+	echo El nombre es correcto, has pasado $variable
+else
+	echo El nombre no es Antonio, es $variable
+fi
+echo fin del script
+
+#!/bin/bash
+clear
+if test $# -ne 1
+then
+	echo se necesita un parámetro
+else
+	variable=$1
+	
+	if [ $variable == “antonio”]
+	then
+		echo El nombre es correcto has pasado $variable
+	else
+		echo El nombre no es Antonio es $variable
+	fi
+fi
+echo fin del script
+
+
 # Al ejecutarlo poner por ejemplo: . 05 pepito
