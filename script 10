@@ -1,0 +1,15 @@
+#!/bin/bash
+# Mostrar los números del 20 al 10 saltándose el número 14
+# Igual que existe break existe continue pueden ejecutarse en bucles y en condicionales
+clear
+
+echo Los números del 20 al 10, sin el 14
+contador=20
+while [ $contador -ge 10 ]
+do
+if [ $contador -ne 14 ]
+then
+	echo $contador
+	fi
+let contador=contador-1
+done
