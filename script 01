@@ -1,0 +1,19 @@
+#!/bin/bash
+clear
+# +-*/ ** variable++  variable--  --variable  ++variable
+# == igualdad		!= desigualdad
+valor1 = 10
+valor2 = 20
+
+resultado = `expr $valor1+$valor2´
+echo resultado $resultado
+
+#Otra forma de ponerlo
+let resultado1=$valor1+$valor2 #let sirve para asignar
+echo resultado $resultado1
+
+let resultado2=$valor1-$valor2 
+echo resultado $resultado2
+
+let resultado3=$valor1/$valor2 
+echo resultado $resultado3
