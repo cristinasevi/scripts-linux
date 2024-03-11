@@ -1,0 +1,11 @@
+#!/bin/bash
+# Mostrar suma de los números comprendidos entre 5 y 10 ambos incluidos
+clear
+
+suma=0
+for (( c=5; c<=10; c++ ))
+do
+	let suma=suma+c
+	echo $suma “+” $c
+done
+	echo suma de números $suma
