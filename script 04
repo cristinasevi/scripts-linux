@@ -1,0 +1,13 @@
+#!/bin/bash
+clear
+
+echo parametro 1 $1 	
+echo parametro 2 $2
+echo parametro 3 $3
+
+echo parametro $0	# nombre del intérprete de comandos
+echo parametro $$	# id del script
+echo parametro $@	# todos los parámetros que pasamos
+echo parametro $#	# número de parámetros que hemos pasado
+
+# Al ejecutarlo poner por ejemplo: .06 hola buenos días
