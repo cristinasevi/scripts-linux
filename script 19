@@ -1,0 +1,27 @@
+#!/bin/bash
+# Crear un número aleatorio entre 0 y 100 y el usuario introduce números hasta que lo adivina. Nos avisa cuando hemos acertado y nos dice el número de intentos.
+# Indica si el número introducido es menor o mayor del que hay que adivinar.
+
+# $RANDOM
+# $(($RANDOM %100))
+
+clear
+
+n=$(($RANDOM %100)) # Se pone %100 porque quieres 100 números
+contador=0
+while true
+do
+	read -p “Introduce número: “ res
+	let contador++
+	if [ $res -eq $n ]
+	then
+		echo Muy bien, lo has acertado en $contador intentos
+		break
+	elif [ $res -gt $n ]
+	then
+		echo El número que has introducido es mayor
+else
+		echo El número que has introducido es menor
+	fi
+done
+echo Hasta la próxima
