@@ -1,0 +1,117 @@
+1-Listar todos los archivos del directorio “tmp”.
+ls -l -a /tmp
+
+2-Listar todos los archivos del directorio “bin” en orden inverso.
+ls -r /bin
+
+3-Listar todos los archivos del directorio “etc” que empiecen por “t”.
+ls -l /etc/t*
+
+4-Listar todos los archivos del directorio “dev” que empiecen por “tty” y tengan 5 caracteres.
+ls -l /dev/tty??
+
+5-Listar todos los archivos del directorio “dev” que empiecen por “tty” y acaben en 1, 2, 3 ó 4.
+ls -l /dev/tty*[1-4]
+
+6-Listar todos los archivos del directorio “dev” que empiecen por “t” y acaben en “S1”.
+ls -l /dev/t*S1
+
+7-Listar todos los archivos, incluidos los ocultos, del directorio raíz.
+ls -a /  
+
+8-Listar todos los archivos del directorio “etc”, que no empiecen por “b”.
+ls /etc/[!b]*
+
+9-Listar todos los archivos del directorio “usr” y sus directorios.
+ls -R /usr
+
+10-Cambiarse al directorio “tmp”.
+cd /tmp
+
+11-Verificar que el directorio actual ha cambiado.
+pwd
+
+12-Mostrar el día y la hora actual.
+date
+
+13-Con un solo comando, posicionarse en el directorio personal.
+cd
+
+14-Verificar que estamos en él.
+pwd
+
+15-Listar todos los ficheros del directorio personal mostrando su número de i-nodo.
+ll -i
+
+16-Crear los directorios dir1, dir2 y dir3 en tu directorio personal, dentro de dir1 crear el directorio dir11, dentro del directorio dir3 crear el directorio dir31, dentro del directorio dir31 crear los directorios dir311 y dir312.
+mkdir dir1 dir2 dir3
+mkdir dir1/dir11
+mkdir dir3/dir31
+mkdir dir3/dir31/dir311
+mkdir dir3/dir31/dir312
+
+17-Para ver que se han creado: 
+ls -R
+tree 
+
+18-Copiar el archivo /etc/networks al archivo “mensaje” de vuestro directorio personal.
+cp /etc/networks mensaje
+
+19-Copiar el archivo mensaje en dir1, dir2 y dir3.
+cp mensaje dir1/ && cp mensaje dir2/ && cp mensaje dir3/
+
+20-Comprobar el ejercicio anterior mediante un solo comando.
+tree
+
+21-Copiar en el directorio dir311, los archivos de /bin que tengan una “a” como segunda letra y el nombre del archivo tenga cuatro letras.
+cp /bin/?a?? dir3/dir31/dir311/
+
+22-Mover el directorio dir31 y sus subdirectorios debajo de dir2.
+mv dir3/dir31 dir2
+
+23-Borra los archivos y directorios de dir1, incluido el propio directorio.
+rm -R dir1
+
+24-Copiar al directorio dir312 los ficheros del directorio /dev que empiecen por “t”, acaben entre 1 y 4 y tengan cinco letras en su nombre.
+cp /dev/t???[1-4] dir2/dir31/dir312
+
+25-Mover el directorio dir312 debajo de dir3.
+mv dir2/dir31/dir312 dir3
+
+26-Crear un l (enlace/link) del directorio dir3 llamado enlacedir1 (crear el directorio dir1).
+ln -s /home/nombre_usuario/dir1 /dir3/enlacedir1
+
+27-Posicionarse en dir3 y empleando el enlace creado en el ejercicio anterior, crear el directorio nuevo1 dentro de dir1.
+cd dir3
+mkdir enlacedir1/nuevo1
+
+28-Eliminar todos los permisos de escritura (propietario, grupo, otros) del directorio dir2.
+chmod 555 dir2
+
+4 2 1		4 2 1		4 0 1
+r w x		r w x		r _ x 
+_____   _____   _____
+prop  	grupo		otros
+  7       5       5
+
+29-Eliminar el permiso de lectura del directorio dir2, al resto de los usuarios.
+chmod 551 dir2
+
+30-¿Cuáles son ahora los permisos asociados a dir2?
+ls -l
+
+31-Crear bajo dir2, un directorio llamado dir21.
+mkdir dir2/dir21	→	Permission denied, porque le hemos quitado los permisos.
+
+32-Concederse a sí mismo permiso de escritura en el directorio dir2 e intentar de nuevo el paso anterior.
+chmod 751 dir2
+mkdir dir2/dir21
+
+33-Mostrar cuántos usuarios tiene registrados el sistema (el registro de usuarios está en el archivo /etc/passwd).
+cat /etc/passwd
+
+34-Mostrar cuántos usuarios hay conectados.
+who -q
+
+35-Mostrar los últimos usuarios que se han conectado.
+last
