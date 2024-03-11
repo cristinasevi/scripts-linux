@@ -101,9 +101,9 @@ mkdir dir1 mkdir dir2 ls -l
 31-Eliminar todos los permisos de escritura (propietario, grupo, otros) del directorio dir2.
 chmod 555 dir2
 
-4 2 1		4 2 1		4 0 1
-r w x		r w x		r _ x 
-_____   _____   _____
+4 2 1  4 2 1  4 0 1
+r w x  r w x  r _ x 
+_____  _____  _____
 prop  	grupo		otros
   7       5       5
 
