@@ -1,0 +1,28 @@
+#!/bin/bash
+# Pedimos el nombre al usuario y si está vacío volver a pedirlo, si no está vacío que 
+# diga Hola y el nombre del usuario
+clear
+
+echo -n “Escribe tu nombre: “
+read nombre
+if [ -z $nombre ]
+then
+	echo -n “Vuelve a escribir tu nombre: “
+	read nombre
+	echo Hola $nombre
+else
+	echo Hola $nombre
+fi
+
+# Hacerlo con while
+
+echo -n “Escribe tu nombre: “
+read nombre
+while [ -z $nombre ]
+do
+	echo -n “Vuelve a escribir tu nombre: “
+	read nombre
+	echo Hola $nombre
+done
+	echo Hola $nombre
+
