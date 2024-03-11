@@ -1,0 +1,15 @@
+#!/bin/bash
+# Pedimos dos números por teclado y mostramos cual es el menor de los dos
+clear
+
+echo -n “Introduce el primer número: “ # -n hace que no te cambie de línea
+read num1
+echo -n “Introduce el segundo número: “
+read num2
+
+if [ $num1 -lt $num2 ]
+then
+	echo $num1 es menor que $num2
+else
+	echo $num2 es menor que $num1
+fi
