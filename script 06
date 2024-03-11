@@ -1,0 +1,10 @@
+#!/bin/bash
+clear
+
+contador=0
+while [ $contador -le 100 ] # -le es menor o igual, -lt es menor que
+do
+	let contador=contador+10
+echo valor del contador es $contador
+done
+echo valor final del contador $contador
